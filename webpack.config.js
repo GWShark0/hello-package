@@ -8,7 +8,7 @@ const PATHS = {
 
 const config = {
   entry: {
-    app: PATHS.script,
+    index: PATHS.script,
   },
   output: {
     path: PATHS.dist,
