@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const PATHS = {
   script: path.resolve(__dirname, 'src', 'script'),
   dist: path.resolve(__dirname, 'dist'),
-}
+};
 
 const config = {
   entry: {

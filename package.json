@@ -1,12 +1,12 @@
 {
   "name": "hello-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A test React package",
   "main": "dist/index.js",
   "author": "Greg Douglas (gwshark0@gmail.com)",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run clean && webpack",
     "clean": "rm -rf dist"
   },
   "devDependencies": {

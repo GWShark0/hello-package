@@ -1,7 +1,7 @@
 import Hello from './Hello';
 import Button from './Button';
 
-export default {
+module.exports = {
   Hello,
   Button,
 }
