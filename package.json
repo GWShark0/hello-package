@@ -5,6 +5,13 @@
   "main": "dist/index.js",
   "author": "Greg Douglas (gwshark0@gmail.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "GWShark0/hello-package"
+  },
+  "bugs": {
+    "url": "https://github.com/GWShark0/hello-package/issues"
+  },
   "scripts": {
     "build": "npm run clean && webpack",
     "clean": "rm -rf dist"
