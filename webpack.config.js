@@ -1,14 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const PATHS = {
-  script: path.resolve(__dirname, 'src', 'script'),
+  src: path.resolve(__dirname, 'src'),
   dist: path.resolve(__dirname, 'dist'),
 };
 
 const config = {
   entry: {
-    index: PATHS.script,
+    index: PATHS.src,
   },
   output: {
     path: PATHS.dist,
@@ -20,11 +21,22 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        include: PATHS.script,
+        include: PATHS.src,
         use: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        include: PATHS.src,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader',
+        }),
       }
     ]
   },
+  plugins: [
+    new ExtractTextPlugin('[name].css')
+  ],
   externals: [
     {
       react: {
