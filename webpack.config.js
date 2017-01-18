@@ -17,6 +17,7 @@ const config = {
     library: 'HelloPackage',
     libraryTarget: 'umd',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {

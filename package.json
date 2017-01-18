@@ -14,7 +14,9 @@
   },
   "scripts": {
     "build": "npm run clean && webpack",
-    "clean": "rm -rf dist"
+    "docs": "webpack --config webpack.config.docs.js",
+    "docs:watch": "webpack --watch --config webpack.config.docs.js",
+    "clean": "rm -rf dist && rm -rf docs/public"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -23,8 +25,10 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "html-webpack-plugin": "^2.26.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
     "style-loader": "^0.13.1",
     "webpack": "beta"
   }
